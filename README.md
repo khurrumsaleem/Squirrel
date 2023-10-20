@@ -90,7 +90,7 @@ $$
 The TemperatureFeedbackInt postprocessor implements
 
 $$
-\rho = \int dr \frac{\psi_i}{\Delta T} \delta T_i
+\rho = \int dr \psi_i \Delta T \delta T_i
 $$
 
 ## Tests
