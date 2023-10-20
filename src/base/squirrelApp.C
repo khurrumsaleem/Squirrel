@@ -8,7 +8,7 @@ InputParameters
 squirrelApp::validParams()
 {
   InputParameters params = MooseApp::validParams();
-  params.set<bool>("use_legacy_material_output") = false;
+
   return params;
 }
 
@@ -19,10 +19,10 @@ squirrelApp::squirrelApp(InputParameters parameters) : MooseApp(parameters)
 
 squirrelApp::~squirrelApp() {}
 
-void 
-squirrelApp::registerAll(Factory & f, ActionFactory & af, Syntax & s)
+void
+squirrelApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
 {
-  ModulesApp::registerAllObjects<squirrelApp>(f, af, s);
+  ModulesApp::registerAll(f, af, syntax);
   Registry::registerObjectsTo(f, {"squirrelApp"});
   Registry::registerActionsTo(af, {"squirrelApp"});
 
