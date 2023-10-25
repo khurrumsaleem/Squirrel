@@ -54,10 +54,11 @@ $$ \delta T_i = T_i - T_{ref, i}  $$
 
 We can now calculate the change in $\rho_{temp}$ introduced by a temperature change:
 
-$$ \rho_{temp} = \langle \psi |\delta T \rangle \Delta_{pcm/K}.
- $$
+$$ 
+\rho_{temp} = \langle \psi |\delta T \rangle \Delta_{pcm/K}.
+$$
 
-with $ \Delta$ being the reactivity change in reactivity caused by a global increase by $1$ Kelvin and $\int dr \psi(r) = 1$
+with $\Delta$ being the reactivity change in reactivity caused by a global increase by $1$ Kelvin and $\int dr \psi(r) = 1$
 
 
 
