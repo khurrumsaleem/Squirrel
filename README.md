@@ -52,15 +52,13 @@ For a given temperature field $T$ we can calculate the difference at each point 
 
 $$ \delta T_i = T_i - T_{ref, i}  $$
 
-We can now calculate the change in $\rho_i$ introduced at each point: # TODO THAT IS WRONG!
+We can now calculate the change in $\rho_{temp}$ introduced by a temperature change:
 
-$$ \rho_i = \frac{psi_i}{\Delta T} \delta T_i $$
+$$ \rho_{temp} = \langle \psi |\delta T \rangle \Delta_{pcm/K}.
+ $$
 
-with $ \Delta T$ being the reactivity change in reactivity caused by a global increase by $1$ Kelvin and $\sum psi_i = 1$
+with $ \Delta$ being the reactivity change in reactivity caused by a global increase by $1$ Kelvin and $\int dr \psi(r) = 1$
 
-The actual change in the reactivity is then  
-
-$$ \rho = \sum_i \rho_i $$
 
 
 
@@ -83,14 +81,15 @@ $$
 
 The TemperatureFeedback postprocessor implements
 
+
 $$
-\rho = \sum_i \frac{\psi_i}{\Delta T} \delta T_i
+\rho = \sum_i \psi_i\Delta  \delta T_i
 $$
 
 The TemperatureFeedbackInt postprocessor implements
 
 $$
-\rho = \int dr \psi_i \Delta T \delta T_i
+\rho = \int dr \psi_i \Delta  \delta T_i
 $$
 
 ## Tests
