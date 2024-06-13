@@ -9,7 +9,7 @@ WeightDNPPostprocessor::validParams()
   InputParameters params = ElementIntegralVariablePostprocessor::validParams();
   params.addClassDescription("Calculates the weight of the DNPs");
   params.addRequiredCoupledVar("other_variable", "The variable to compare to");
-  params.addParam<PostprocessorName>("Norm", 1.0, "The postprocessor to use for value of the gradient on the boundary.");
+  params.addParam<PostprocessorName>("Norm", 1.0, "The squareroot of the product of the weight functions");
   params.addParam<Real>("lambda", 1.0, "lambda");
   return params;
 }
@@ -23,7 +23,7 @@ WeightDNPPostprocessor::WeightDNPPostprocessor(const InputParameters & parameter
 }
 
 Real
-WeightDNPPostprocessor::getValue()
+WeightDNPPostprocessor::getValue() const
 {
   //return ElementIntegralVariablePostprocessor::getValue()*_lambda/(_norm);
  return ElementIntegralVariablePostprocessor::getValue();
@@ -36,43 +36,3 @@ WeightDNPPostprocessor::computeQpIntegral()
   return prod*_lambda/(_norm*_norm);
 }
 
-
-
-//#include "WeightDNPPostprocessor.h"
-//
-//registerMooseObject("squirrelApp", WeightDNPPostprocessor);
-//
-//InputParameters
-//WeightDNPPostprocessor::validParams()
-//{
-//  InputParameters params = ElementIntegralVariablePostprocessor::validParams();
-//  params.addClassDescription("Calculates the weight of the DNPs");
-//  params.addRequiredCoupledVar("other_variable", "The variable to compare to");
-//  params.addParam<PostprocessorName>("Norm", 1.0, "The postprocessor to use for value of the gradient on the boundary.");
-//  params.addParam<Real>("lambda", 1.0, "lambda");
-//  return params;
-//}
-//
-//WeightDNPPostprocessor::WeightDNPPostprocessor(const InputParameters & parameters)
-//  : ElementIntegralVariablePostprocessor(parameters),
-//	_other_var(coupledValue("other_variable")),
-//	_norm(getPostprocessorValue("Norm")),
-//    _lambda(getParam<Real>("lambda"))
-//{
-//}
-//
-//void
-//WeightDNPPostprocessor::threadJoin(const UserObject & y)
-//{
-//  const WeightDNPPostprocessor & pps = static_cast<const WeightDNPPostprocessor &>(y);
-//  _integral_value += pps._integral_value;
-//}
-//
-//Real
-//WeightDNPPostprocessor::computeQpIntegral()
-//{
-//  Real prod = _u[_qp] * _other_var[_qp];
-//  return prod*_lambda/(_norm*_norm);
-//}
-//
-//

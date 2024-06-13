@@ -10,7 +10,7 @@ public:
 
   TemperatureFeedbackInt(const InputParameters & parameters);
 
-  virtual Real getValue() override;
+  virtual Real getValue() const override;
 
 protected:
   virtual Real computeQpIntegral() override;
@@ -18,4 +18,5 @@ protected:
   const VariableValue & _T_ref;
   const VariableValue & _flux;
   Real _total_rho;
+  const PostprocessorValue & _Norm;
 };

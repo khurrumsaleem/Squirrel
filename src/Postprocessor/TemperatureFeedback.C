@@ -39,7 +39,7 @@ TemperatureFeedback::execute()
 }
 
 Real
-TemperatureFeedback::getValue()
+TemperatureFeedback::getValue() const
 {
 	return _sum * _total_rho;
 }

@@ -1,0 +1,14 @@
+[Tests]
+  [test]
+    type = 'Exodiff'
+    input = 'Xe_I_steady.i'
+    exodiff = 'Xe_I_steady_out.e'
+    requirement = 'The system shall be able to calculate the steady concentrations'
+  []
+  [test1]
+    type = 'Exodiff'
+    input = 'Xe_I_transient.i'
+    exodiff = 'Xe_I_transient_out.e'
+    requirement = 'The system shall be able to calculate the transient concentrations from 0'
+  []
+[]

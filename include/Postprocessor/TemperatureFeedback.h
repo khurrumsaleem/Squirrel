@@ -11,9 +11,9 @@ public:
 
   virtual void initialize() override;
   virtual void execute() override;
-  virtual Real getValue() override;
   virtual void finalize() override;
   virtual void threadJoin(const UserObject & y) override;
+  virtual Real getValue () const override;
 
 protected:
   /// The variable to compare to
