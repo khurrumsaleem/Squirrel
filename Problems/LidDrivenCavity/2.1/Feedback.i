@@ -2,6 +2,10 @@ rho_external = ${fparse 1.08e-03 }
 LAMBDA = 9.82015e-07
 beta_sum = 0.006882528
 
+[Problem]
+allow_initial_conditions_with_restart = true
+[]
+
 [Mesh]
   file =Feedback_steady_out.e 
 []

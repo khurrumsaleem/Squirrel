@@ -1,4 +1,3 @@
-
 #PARAMETER
 time_out_of_core = 16.74
 L = 1.6 # m
@@ -19,10 +18,12 @@ lambda6 =  2.5
 LAMBDA =  0.0004
 
 u = 0.189
-rho = 1.425752e-03#2.503124e-03#3.150596e-03 #steady state
+rho = 1.425752e-03 #steady state
 rho_external = 11.4e-5
-#rho_external = 19e-5
 
+[Problem]
+allow_initial_conditions_with_restart = true
+[]
 
 
 [Mesh]

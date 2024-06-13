@@ -36,6 +36,10 @@ velocity_interp_method = 'rc'
 #advected_interp_method = 'average'
 advected_interp_method = 'upwind'
 
+[Problem]
+allow_initial_conditions_with_restart = true
+[]
+
 [Mesh]
   file = 2.1_steady_out.e 
 []
@@ -259,7 +263,6 @@ advected_interp_method = 'upwind'
     type =  INSFVEnergyTimeDerivative 
     variable = T
     rho = ${rho}
-    cp = 'cp'
   []
   [temp_advection]
     type = INSFVEnergyAdvection
