@@ -62,7 +62,7 @@
   [Reader]
     type = FullSolveMultiApp
     input_files = "Reader.i"
-    execute_on= INITIAL
+    execute_on= TIMESTEP_BEGIN
   []
 []
 
@@ -73,14 +73,14 @@
     from_multi_app = Reader 
     source_variable = power_scaled
     variable = flux
-    execute_on= INITIAL
+    execute_on= TIMESTEP_BEGIN
   [] 
   [pull_C_tot_inital]
     type = MultiAppShapeEvaluationTransfer
     from_multi_app = Reader 
     source_variable = C_tot
     variable = C
-    execute_on = INITIAL
+    execute_on = TIMESTEP_BEGIN
   [] 
 []
 
