@@ -13,8 +13,8 @@ public:
 protected:
 
   virtual Real computeValue() override;
+  const VariableValue & _src;
   MooseVariableScalar & _var;
   unsigned int _idx;
-  const VariableValue & _src;
   Real _normal_factor;
 };

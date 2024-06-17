@@ -17,8 +17,8 @@ protected:
 
 protected:
   /// The coupled functor applying the force
-  const Moose::Functor<ADReal> & _v;
   const Moose::Functor<ADReal> & _u;
+  const Moose::Functor<ADReal> & _v;
   /// An optional coefficient multiplying the coupled force
   const Real _coef;
 };

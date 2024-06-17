@@ -17,9 +17,9 @@ public:
 
 protected:
   /// The variable to compare to
+  Real _sum;
+  Real _n;
   const VariableValue & _T_ref;
   const VariableValue & _flux;
   Real _total_rho;
-  Real _sum;
-  Real _n;
 };
