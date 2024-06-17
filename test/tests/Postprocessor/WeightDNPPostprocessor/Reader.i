@@ -45,14 +45,14 @@
     prop_file_name = 'C_tot.csv'
     read_type = 'node'
     nprop = 1  # number of columns in CSV
-    execute_on = 'INITIAL'
+    execute_on = 'initial'
   []
   [reader_power]
     type = PropertyReadFile
     prop_file_name = 'power.csv'
     read_type = 'node'
     nprop = 1  # number of columns in CSV
-    execute_on = 'INITIAL'
+    execute_on = 'initial'
   []
 []
 
@@ -100,27 +100,27 @@
 [Postprocessors]
   [power_sum]
     type = NodalSum
-    execute_on = 'INITIAL TIMESTEP_END'
+    execute_on = 'initial TIMESTEP_END'
     variable = power
   []
   [power_int]
     type = ElementIntegralVariablePostprocessor
-    execute_on = 'INITIAL TIMESTEP_END'
+    execute_on = 'initial TIMESTEP_END'
     variable = power
   []
   [power_s_sum]
     type = NodalSum
-    execute_on = 'INITIAL TIMESTEP_END'
+    execute_on = 'initial TIMESTEP_END'
     variable = power_scaled
   []
   [power_s_int]
     type = ElementIntegralVariablePostprocessor
-    execute_on = 'INITIAL TIMESTEP_END'
+    execute_on = 'initial TIMESTEP_END'
     variable = power_scaled
   []
   [C_int_end]
     type = ElementIntegralVariablePostprocessor
-    execute_on = 'INITIAL timestep_end'
+    execute_on = 'initial timestep_end'
     variable = C_tot
   []
 []
