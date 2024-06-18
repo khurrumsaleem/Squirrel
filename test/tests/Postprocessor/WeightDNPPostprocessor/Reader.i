@@ -45,14 +45,12 @@
     prop_file_name = 'C_tot.csv'
     read_type = 'node'
     nprop = 1  # number of columns in CSV
-    execute_on = 'initial'
   []
   [reader_power]
     type = PropertyReadFile
     prop_file_name = 'power.csv'
     read_type = 'node'
     nprop = 1  # number of columns in CSV
-    execute_on = 'initial'
   []
 []
 
