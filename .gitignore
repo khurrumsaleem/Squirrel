@@ -14,14 +14,14 @@
 *-prof
 *-profiling
 *-devel
-*.e
+
 *.nav
 *.log
 *.aux
 *.toc
 *.snm
-*.csv
-*.csv.*
+#*.csv
+#*.csv.*
 *.dylib
 *.so
 *.so.*

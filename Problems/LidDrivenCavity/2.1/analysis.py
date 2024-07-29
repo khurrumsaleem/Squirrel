@@ -34,6 +34,7 @@ for k in x:
     dt = 1/(40*k*np.pi)
     print("freq ", k, dt)
     print("time ", 1000*dt)
+    print("data/2.1_dt=%s_4frequency=%s.csv"%(dt, k*np.pi))
     Squirrel = np.loadtxt("data/2.1_dt=%s_4frequency=%s.csv"%(dt, k*np.pi), skiprows=1, delimiter=' ')
     Squirrel = Squirrel.T
     
