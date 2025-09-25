@@ -1,8 +1,0 @@
-[Tests]
-  [test]
-    type = 'CSVDiff'
-    input = 'TempDoppler.i'
-    csvdiff = 'TempDoppler_outfile.csv'
-    requirement = 'The system shall be able to calculate the doppler feedback'
-  []
-[]

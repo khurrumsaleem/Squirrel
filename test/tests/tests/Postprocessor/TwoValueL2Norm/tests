@@ -1,8 +1,0 @@
-[Tests]
-  [test]
-    type = 'Exodiff'
-    input = 'test_norm.i'
-    exodiff = 'test_norm_out.e'
-    requirement = 'The PP should be able to calculate the sqrt(int(sin(x)x; from 0 to 1)) '
-  []
-[]

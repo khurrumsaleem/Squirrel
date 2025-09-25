@@ -1,8 +1,0 @@
-[Tests]
-  [test]
-    type = 'Exodiff'
-    input = 'ScalarMultiplication.i'
-    exodiff = 'ScalarMultiplication_out.e'
-    requirement = 'The system shall be able to generate and multiply the Aux variable with the scalar variable.'
-  []
-[]

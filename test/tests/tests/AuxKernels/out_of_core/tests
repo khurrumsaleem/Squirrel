@@ -1,8 +1,0 @@
-[Tests]
-  [test]
-    type = 'Exodiff'
-    input = 'out_of_core.i'
-    exodiff = 'out_of_core_out.e'
-    requirement = 'The system shall be able to move the DNPs outside of the core'
-  []
-[]
