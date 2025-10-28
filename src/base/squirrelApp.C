@@ -14,7 +14,8 @@ squirrelApp::validParams()
 
 squirrelApp::squirrelApp(InputParameters parameters) : MooseApp(parameters)
 {
-  squirrelApp::registerAll(_factory, _action_factory, _syntax);
+  /*squirrelApp::registerAll(_factory, _action_factory, _syntax);*/
+  ModulesApp::registerAllObjects<squirrelApp>(_factory, _action_factory, _syntax);
 }
 
 squirrelApp::~squirrelApp() {}
@@ -22,7 +23,7 @@ squirrelApp::~squirrelApp() {}
 void
 squirrelApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
 {
-  ModulesApp::registerAll(f, af, syntax);
+  ModulesApp::registerAllObjects<squirrelApp>(f, af, syntax);
   Registry::registerObjectsTo(f, {"squirrelApp"});
   Registry::registerActionsTo(af, {"squirrelApp"});
 
