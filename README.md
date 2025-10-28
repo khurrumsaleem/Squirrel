@@ -4,6 +4,9 @@ Squirrel
 "Fork squirrel" to create a new MOOSE-based application. 
 
 This application is intended as a light weight and flexible implementation of the PK equation with the ability to capture the change in reactivity caused by the DNP movement and changes in temperature.
+
+If you use the Squirrel app considder citing: 
+🔗 [https://doi.org/10.1080/00295639.2025.2494182](https://doi.org/10.1080/00295639.2025.2494182)
 # DNP movement 
 A good derivation of this can be found in Chapter two of Mathematical-Methods-in-Nuclear-Reactor-Dynamics.
 For a given power 
