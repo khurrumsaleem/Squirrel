@@ -65,7 +65,7 @@ allow_initial_conditions_with_restart = true
 
 [Postprocessors]
   [rho_temp]
-      type = TemperatureFeedback
+      type = TemperatureFeedbackInt
       variable = T
       flux = psi
       T_ref = T_ref

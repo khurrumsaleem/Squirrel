@@ -92,7 +92,7 @@ lambda8 = 3.5546
     prop_file_name = 'power.csv'
     read_type = 'node'
     nprop = 1  # number of columns in CSV
-    execute_on = 'INITIAL'
+    #execute_on = 'INITIAL'
   []
 []
 
@@ -240,8 +240,7 @@ lambda8 = 3.5546
     execute_on = 'INITIAL timestep_end'
     variable = flux
   []
-  [C1_int_end]
-    type = ElementIntegralVariablePostprocessor
+  [C1_int_end]    type = ElementIntegralVariablePostprocessor
     execute_on = 'INITIAL timestep_end'
     variable = C1
   []

@@ -567,13 +567,13 @@ dy = 75
  []
  [A]
  type = ParsedPostprocessor
-  function = 'A1+A2+A3+A4+A5+A6+A7+A8'
+ expression = 'A1+A2+A3+A4+A5+A6+A7+A8'
   pp_names = 'A1 A2 A3 A4 A5 A6 A7 A8'
   execute_on = 'initial timestep_end '
 []
  [Calc_rho]
   type = ParsedPostprocessor
-  function = '-A*LAMBDA+beta'
+  expression = '-A*LAMBDA+beta'
   pp_names = 'A'
   constant_names =  'LAMBDA beta'
   constant_expressions ='${LAMBDA} ${beta}'

@@ -658,7 +658,7 @@ lambda8 = 3.5546
  []
  [A]
  type = ParsedPostprocessor
-  function = 'A1+A2+A3+A4+A5+A6+A7+A8'
+ expression = 'A1+A2+A3+A4+A5+A6+A7+A8'
   pp_names = 'A1 A2 A3 A4 A5 A6 A7 A8'
   execute_on = 'initial timestep_end '
 []
